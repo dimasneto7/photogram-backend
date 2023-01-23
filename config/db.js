@@ -4,7 +4,7 @@ const dbPassword = process.env.DB_PASS;
 
 const conn = async () => {
   try {
-    const dbConn = await mongoosr.connect(
+    const dbConn = await mongoose.connect(
       `mongodb+srv://${dbUser}:${dbPassword}@cluster0.moqfuou.mongodb.net/?retryWrites=true&w=majority`
     );
 
