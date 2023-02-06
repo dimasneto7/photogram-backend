@@ -76,7 +76,7 @@ const login = async (req, res) => {
   }
 
   // return user with token
-  res.status(201).json({
+  res.status(200).json({
     _id: user._id,
     profileImage: user.profileImage,
     token: generateToken(user._id),
@@ -135,7 +135,7 @@ const getUserById = async (req, res) => {
 
     // check if user exists
     if (!user) {
-      res.status(404).json({ errors: ["Usuário não encontrado."] });
+      res.status(404).json({ errors: ["Usuário não encontrado!"] });
       return;
     }
 
